@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Main Page</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#bb0000">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header_main js-header">
+			<div class="container">
+				<div class="header__left">
+					<div class="header__menu">
+						<div class="hamburger js-hamburger">
+							<div class="hamburger__inner"></div>
+						</div>
+					</div>
+					<div class="header__logo">
+						<div class="logo">
+							<a href="#" class="logo__pic">
+								<img class="lazyload" data-src="images/logo/logo.svg" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="header__text"> Пищевые <br> ингредиенты оптом </div>
+					<div class="header__phone hide-desk">
+						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__callback">
+						<button type="button" class="btn-callback">Заказать звонок</button>
+					</div>
+					<div class="header__phone hide-mob">
+						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
+					</div>
+					<div class="header__search">
+						<div class="search-header js-search-header">
+							<form action="#">
+								<input type="text" placeholder="Поиск" class="search-header__input js-search-header__input">
+								<button type="button" class="search-header__btn js-search-header__btn"></button>
+							</form>
+						</div>
+					</div>
+					<div class="header__langs">
+						<div class="langs ">
+							<span class="langs__lang active">RUS</span>
+							<span class="langs__separate">|</span>
+							<a href="#" class="langs__lang">EN</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="header-fixed-height-mob hide-desk"></div>
+		<main class="middle">
+			<section class="main-banner">
+				<div class="main-banner__pic">
+					<picture>
+						<source media="(max-width: 767px)" data-srcset="images/main-banner/pic-mob.png">
+						<img class="lazyload" data-src="images/main-banner/pic.png" alt="pic">
+					</picture>
+				</div>
+				<div class="container container_smaller">
+					<div class="main-banner__text">
+						<h1>Поставки пищевых ингрединтов для вашего производства</h1>
+						<span>Разработка рецептуры. Технологическая поддержка</span>
+					</div>
+				</div>
+			</section>
+			<section class="text-block text-block_main">
+				<div class="container container_smaller">
+					<div class="text-block__col">
+						<div class="text-block__title">
+							<h2 class="title-block"> О компании </h2>
+						</div>
+					</div>
+					<div class="text-block__col">
+						<div class="text-block__text">Компания TFS Group – Ваш надежный партнер по поставке пищевых ингредиентов на территории РФ и стран СНГ. Мы поставляем и продаем ингредиенты для любого вида пищевого производства. Продукт высокого качества, гибкие логистические условия, высококвалифицированная технологическая поддержка на всех этапах производства – это то, что Вы гарантированно получаете, работая с нами.</div>
+						<div class="text-block__link">
+							<a href="#" class="detail-link">Узнать больше</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="banner-links banner-links_main">
+				<div class="container">
+					<div class="banner-links__row">
+						<div class="banner-links__col">
+							<a href="#" class="banner-links__link lazyload" data-bg="images/banner-links/pic.jpg">
+								<span class="banner-links__title">Пищевая промышленность</span>
+							</a>
+						</div>
+						<div class="banner-links__col">
+							<a href="#" class="banner-links__link lazyload" data-bg="images/banner-links/pic-2.jpg">
+								<span class="banner-links__title">Корма для животных</span>
+							</a>
+						</div>
+						<div class="banner-links__col">
+							<a href="#" class="banner-links__link lazyload" data-bg="images/banner-links/pic-3.jpg">
+								<span class="banner-links__title">Спортивное и функциональное питание </span>
+							</a>
+						</div>
+						<div class="banner-links__col">
+							<a href="#" class="banner-links__link lazyload" data-bg="images/banner-links/pic-4.jpg">
+								<span class="banner-links__title">Косметика и уход за полостью рта</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="logotypes logotypes_main">
+				<div class="container container_smaller">
+					<div class="logotypes__title">
+						<h2 class="title-block">Производители</h2>
+					</div>
+					<div class="logotypes__row">
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic.png" width="200px" height="36px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-2.png" width="171px" height="40px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-3.png" width="103px" height="46px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-4.png" width="230px" height="46px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-5.png" width="156px" height="46px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-6.png" width="158px" height="46px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-7.png" width="135px" height="46px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-8.png" width="200px" height="29px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-9.png" width="170px" height="46px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-10.png" width="178px" height="46px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-11.png" width="240px" height="46px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-12.png" width="132px" height="46px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/manufacturers/pic-13.png" width="200px" height="44px" alt="logo">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="advantages-support advantages-support_main">
+				<div class="container container_smaller">
+					<div class="advantages-support__title">
+						<h2 class="title-block"> Технологическая поддержка на всех этапах производства </h2>
+					</div>
+					<div class="advantages-support__info-text">Вы задаете какими характеристиками должен обладать ваш конечный продукт – мы разрабатываем рецептуру и технологию производства.</div>
+					<div class="advantages-support__row">
+						<div class="advantages-support__col">
+							<div class="advantages-support__item">
+								<div class="advantages-support__icon">
+									<img src="images/advantages-support/icon.svg" alt="icon">
+								</div>
+								<div class="advantages-support__text">Полный контроль цикла работы: от заявки до доставки готовой продукции при четком соблюдении сроков</div>
+							</div>
+						</div>
+						<div class="advantages-support__col">
+							<div class="advantages-support__item">
+								<div class="advantages-support__icon">
+									<img src="images/advantages-support/icon-2.svg" alt="icon">
+								</div>
+								<div class="advantages-support__text">Организация пробных выработок на предприятиях</div>
+							</div>
+						</div>
+						<div class="advantages-support__col">
+							<div class="advantages-support__item">
+								<div class="advantages-support__icon">
+									<img src="images/advantages-support/icon-3.svg" alt="icon">
+								</div>
+								<div class="advantages-support__text">Предоставление бесплатных образцов для испытаний</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="advantages advantages_main">
+				<div class="container container_smaller">
+					<div class="advantages__title">
+						<h2 class="title-block">Наши преимущества</h2>
+					</div>
+					<div class="advantages__row">
+						<div class="advantages__col">
+							<div class="advantages__item">
+								<div class="advantages__icon">
+									<img class="lazyload" data-src="images/advantages/icon.svg" alt="icon">
+								</div>
+								<div class="advantages__text">Более 50 наименований сертифицированных ингредиентов высокого качества</div>
+							</div>
+						</div>
+						<div class="advantages__col">
+							<div class="advantages__item">
+								<div class="advantages__icon">
+									<img class="lazyload" data-src="images/advantages/icon-2.svg" alt="icon">
+								</div>
+								<div class="advantages__text">Неснижаемый складской остаток 800 тонн</div>
+							</div>
+						</div>
+						<div class="advantages__col">
+							<div class="advantages__item">
+								<div class="advantages__icon">
+									<img class="lazyload" data-src="images/advantages/icon-3.svg" alt="icon">
+								</div>
+								<div class="advantages__text">Команда из 35 экспертов, работающих на рынке уже более 16 лет</div>
+							</div>
+						</div>
+						<div class="advantages__col">
+							<div class="advantages__item">
+								<div class="advantages__icon">
+									<img class="lazyload" data-src="images/advantages/icon-4.svg" alt="icon">
+								</div>
+								<div class="advantages__text">Высококвалифицированная технологическая поддержка на всех этапах производства</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="logotypes logotypes_main">
+				<div class="container container_smaller">
+					<div class="logotypes__title">
+						<h2 class="title-block">Клиенты</h2>
+					</div>
+					<div class="logotypes__row">
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic.png" width="154px" height="50px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-2.png" width="150px" height="50px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-3.png" width="121px" height="50px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-4.png" width="124px" height="50px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-5.png" width="101px" height="60px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-6.png" width="110px" height="50px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-7.png" width="74px" height="50px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-8.png" width="174px" height="42px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-9.png" width="179px" height="46px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-10.png" width="149px" height="50px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-11.png" width="75px" height="60px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-12.png" width="98px" height="60px" alt="logo">
+								</picture>
+							</div>
+						</div>
+						<div class="logotypes__item">
+							<div class="logotypes__pic">
+								<picture>
+									<img class="lazyload" data-src="images/logotypes/clients/pic-13.png" width="124px" height="60px" alt="logo">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="articles-slider articles-slider_main js-articles-slider">
+				<div class="container container_smaller">
+					<div class="articles-slider__title">
+						<h2 class="title-block">Новости</h2>
+					</div>
+				</div>
+				<div class="articles-slider__content">
+					<div class="container container_smaller">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<article class="article-block">
+										<div class="article-block__pic">
+											<a href="#">
+												<img class="lazyload" data-src="images/articles-slider/news/pic.jpg" alt="pic">
+											</a>
+										</div>
+										<h3 class="article-block__title">
+											<a href="#">Друзья, теперь мы есть в INSTAGRAM !</a>
+										</h3>
+										<div class="article-block__date">
+											<time datetime="2021-10-21">21.10.2021</time>
+										</div>
+										<div class="article-block__link">
+											<a href="#" class="detail-link">Подробнее</a>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="article-block">
+										<div class="article-block__pic">
+											<a href="#">
+												<img class="lazyload" data-src="images/articles-slider/news/pic-2.jpg" alt="pic">
+											</a>
+										</div>
+										<h3 class="article-block__title">
+											<a href="#">Наш эксперт по питанию в INSTAGRAM !</a>
+										</h3>
+										<div class="article-block__date">
+											<time datetime="2021-10-14">14.10.2021</time>
+										</div>
+										<div class="article-block__link">
+											<a href="#" class="detail-link">Подробнее</a>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="article-block">
+										<div class="article-block__pic">
+											<a href="#">
+												<img class="lazyload" data-src="images/articles-slider/news/pic-3.jpg" alt="pic">
+											</a>
+										</div>
+										<h3 class="article-block__title">
+											<a href="#">Запись и презентация вебинара от 20.07 доступны</a>
+										</h3>
+										<div class="article-block__date">
+											<time datetime="2021-07-22">22.07.2021</time>
+										</div>
+										<div class="article-block__link">
+											<a href="#" class="detail-link">Подробнее</a>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="article-block">
+										<div class="article-block__pic">
+											<a href="#">
+												<img class="lazyload" data-src="images/articles-slider/news/pic.jpg" alt="pic">
+											</a>
+										</div>
+										<h3 class="article-block__title">
+											<a href="#">Друзья, теперь мы есть в INSTAGRAM !</a>
+										</h3>
+										<div class="article-block__date">
+											<time datetime="2021-10-21">21.10.2021</time>
+										</div>
+										<div class="article-block__link">
+											<a href="#" class="detail-link">Подробнее</a>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="article-block">
+										<div class="article-block__pic">
+											<a href="#">
+												<img class="lazyload" data-src="images/articles-slider/news/pic-2.jpg" alt="pic">
+											</a>
+										</div>
+										<h3 class="article-block__title">
+											<a href="#">Наш эксперт по питанию в INSTAGRAM !</a>
+										</h3>
+										<div class="article-block__date">
+											<time datetime="2021-10-14">14.10.2021</time>
+										</div>
+										<div class="article-block__link">
+											<a href="#" class="detail-link">Подробнее</a>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="articles-slider__arrows">
+						<div class="swiper-arrow swiper-arrow_prev js-swiper-arrow-prev"></div>
+						<div class="swiper-arrow swiper-arrow_next js-swiper-arrow-next"></div>
+					</div>
+				</div>
+			</section>
+			<section class="adresses-block adresses-block_main js-adresses-block">
+				<div class="container container_smaller">
+					<h3 class="adresses-block__top-title">Склады</h3>
+					<div class="adresses-block__row">
+						<div class="adresses-block__item active">
+							<div class="adresses-block__title js-adresses-block__title" data-cordinates-of-map="55.431136, 37.544997">Москва, Подольск</div>
+							<div class="adresses-block__content">
+								<div class="adresses-block__text"> «KNIGHT LOGISTICS» <br>
+									<br> 142153, Московская обл, г.о. Подольск, деревня Новоселки, территория Технопарка, д. 9 <br>
+									<br> +7 (495) 032-66-05 <br>
+									<br> Время работы: 9:00 – 17:00
+								</div>
+								<div class="adresses-block__file-link">
+									<a href="#" class="download-link">Скачать схему проезда</a>
+								</div>
+								<div class="adresses-block__mob-map hide-desk js-adresses-block__mob-map"></div>
+							</div>
+						</div>
+						<div class="adresses-block__item">
+							<div class="adresses-block__title js-adresses-block__title" data-cordinates-of-map="55.030204, 82.920430">Новосибирск</div>
+							<div class="adresses-block__content">
+								<div class="adresses-block__text"> «KNIGHT LOGISTICS» <br>
+									<br> 142153, Московская обл, г.о. Подольск, деревня Новоселки, территория Технопарка, д. 9 <br>
+									<br> +7 (495) 032-66-05 <br>
+									<br> Время работы: 9:00 – 17:00
+								</div>
+								<div class="adresses-block__file-link">
+									<a href="#" class="download-link">Скачать схему проезда</a>
+								</div>
+								<div class="adresses-block__mob-map hide-desk js-adresses-block__mob-map"></div>
+							</div>
+						</div>
+						<div class="adresses-block__item">
+							<div class="adresses-block__title js-adresses-block__title" data-cordinates-of-map="52.289588, 104.280606">Иркутск</div>
+							<div class="adresses-block__content">
+								<div class="adresses-block__text"> «KNIGHT LOGISTICS» <br>
+									<br> 142153, Московская обл, г.о. Подольск, деревня Новоселки, территория Технопарка, д. 9 <br>
+									<br> +7 (495) 032-66-05 <br>
+									<br> Время работы: 9:00 – 17:00
+								</div>
+								<div class="adresses-block__file-link">
+									<a href="#" class="download-link">Скачать схему проезда</a>
+								</div>
+								<div class="adresses-block__mob-map hide-desk js-adresses-block__mob-map"></div>
+							</div>
+						</div>
+					</div>
+					<div class="adresses-block__map hide-mob">
+						<div id="map"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- /.middle -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__logo">
+						<div class="logo">
+							<a href="#" class="logo__pic">
+								<img class="lazyload" data-src="images/logo/logo-white.svg" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="footer__langs">
+						<div class="langs langs_footer">
+							<span class="langs__lang active">RUS</span>
+							<span class="langs__separate">|</span>
+							<a href="#" class="langs__lang">EN</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__middle">
+					<div class="footer-info">
+						<div class="footer-info__col">
+							<div class="footer-info__text">Москва Пресненская наб., 6, стр. 2 Башня Империя 123100</div>
+							<div class="footer-info__phone">
+								<a href="tel:+74951827777" class="phone phone_white">+7 (495) 182-77-77</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__text">Новосибирск Советская ул., 75 630132</div>
+							<div class="footer-info__phone">
+								<a href="tel:+73832855878" class="phone phone_white">+7 (383) 285-58-78</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__text">Иркутск ул. Кожова, д. 24 664022</div>
+							<div class="footer-info__phone">
+								<a href="tel:+73952480138" class="phone phone_white">+7 (3952) 48-01-38</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__socials">
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/facebook.svg" alt="facebook">
+								</a>
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/instagram.svg" alt="instagram">
+								</a>
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/dzen.svg" alt="dzen">
+								</a>
+							</div>
+							<div class="footer-info__email">
+								<a href="mailto:info@tfs.group" class="info-email">info@tfs.group</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__subscribe-form">
+					<div class="subscribe-form">
+						<div class="subscribe-form__title">Подписаться на рассылку</div>
+						<form action="#" class="subscribe-form__form">
+							<input type="text" class="subscribe-form__input" placeholder="e-mail">
+							<button type="button" class="subscribe-form__btn">Подписаться</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer-menu">
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Главная</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Каталог</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Все продукты</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Блог</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Вебинары</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Новости</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">О компании</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Доставка и оплата</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Контакты</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Ваша корзина</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">FAQ</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copyright">©TFS Group, 2021</div>
+			</div>
+		</footer>
+	</div>
+	<!-- /.wrapper -->
+	<script src="js/main.bundle.js"></script>
+</body>
+
+</html>
