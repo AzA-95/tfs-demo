@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Article Page</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/article.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#bb0000">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header   js-header">
+			<div class="container">
+				<div class="header__left">
+					<div class="header__menu">
+						<div class="hamburger js-hamburger">
+							<div class="hamburger__inner"></div>
+						</div>
+					</div>
+					<div class="header__logo">
+						<div class="logo">
+							<a href="#" class="logo__pic">
+								<img class="lazyload" data-src="images/logo/logo.svg" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="header__text"> Пищевые <br> ингредиенты оптом </div>
+					<div class="header__phone hide-desk">
+						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__callback">
+						<button type="button" class="btn-orange btn-orange_callback">Заказать звонок</button>
+					</div>
+					<div class="header__phone hide-mob">
+						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
+					</div>
+					<div class="header__search">
+						<div class="search-header js-search-header">
+							<form action="#">
+								<input type="text" placeholder="Поиск" class="search-header__input js-search-header__input">
+								<button type="button" class="search-header__btn js-search-header__btn"></button>
+							</form>
+						</div>
+					</div>
+					<div class="header__langs">
+						<div class="langs ">
+							<span class="langs__lang active">RUS</span>
+							<span class="langs__separate">|</span>
+							<a href="#" class="langs__lang">EN</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="header-fixed-height-mob hide-desk"></div>
+		<div class="menu js-menu">
+			<div class="container container_space-left">
+				<div class="menu__top">
+					<div class="menu__item">
+						<a href="#" class="menu__title">Продукты</a>
+					</div>
+					<div class="menu__item">
+						<a href="#" class="menu__title">Каталог</a>
+					</div>
+					<div class="menu__item">
+						<div class="menu__title js-menu_title">Компания</div>
+						<div class="menu__content">
+							<div class="menu__sub">
+								<div class="menu__sub-link">
+									<a href="#">О нас</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Контакты</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">FAQ</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Доставка и оплата</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Новости</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Другие проекты</a>
+									<div class="menu__dropdown-wrap">
+										<div class="menu__dropdown">
+											<div class="menu__dropdown-link">
+												<a href="#">Спортивные добавки</a>
+											</div>
+											<div class="menu__dropdown-link">
+												<a href="#">Витамин К2</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu__bottom">
+					<div class="menu__col">
+						<a href="tel:+74951827777" class="phone phone_with-city">
+							<span>Москва</span> +7 (495) 182-77-77 </a>
+					</div>
+					<div class="menu__col">
+						<a href="tel:+73832855878" class="phone phone_with-city">
+							<span>Новосибирск</span> +7 (383) 285-58-78 </a>
+					</div>
+					<div class="menu__col">
+						<a href="tel:+73952480138" class="phone phone_with-city">
+							<span>Иркутск</span> +7 (3952) 48-01-38 </a>
+					</div>
+					<div class="menu__col">
+						<a href="mailto:info@tfs.group" class="menu__email">info@tfs.group</a>
+					</div>
+					<div class="menu__col">
+						<div class="menu__socials">
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/facebook.svg" alt="facebook" src="images/social-icons/facebook-grey.svg">
+							</a>
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/instagram.svg" alt="instagram" src="images/social-icons/instagram-grey.svg">
+							</a>
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/dzen.svg" alt="dzen" src="images/social-icons/dzen-grey.svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="middle">
+			<div class="article-page">
+				<div class="article-page__title">
+					<div class="container container_smaller">
+						<div class="page-title-dropdown">
+							<h1 class="page-title js-page-title-dropdown__title">Блог</h1>
+							<div class="page-title-dropdown__items">
+								<a href="#">Вебинары</a>
+								<a href="#">Статьи</a>
+								<a href="#">Новости</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="article-page__content">
+					<div class="container container_smaller">
+						<div class="article-page__desc">
+							<article class="text-default">
+								<div class="pic">
+									<img src="images/article/pic.jpg" alt="pic">
+								</div>
+								<div class="date-published">
+									<time datetime="2021-07-15">15.07.2021</time>
+								</div>
+								<h2>Мастер-класс по приготовлению напитков на растительной основе от ТФС групп и novozymes ("Летний университет 2021", МГУПП)</h2>
+								<p>12 июля представители ТФС Групп и компании Novozymes приняли участие в проекте МГУПП «Летний университет 2021». Был проведен мастер-класс по приготовлению напитков на растительной основе, являющихся альтернативой молоку.</p>
+								<p>Повседневная практика показывает, что рамки и место обучения кадров играет важную роль в формировании новых предложений. Не следует, однако забывать, что консультация с широким активом в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий требуют от нас анализа направлений прогрессивного развития. Таким образом сложившаяся структура организации играет важную роль в формировании новых предложений.</p>
+								<br>
+								<p>Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение модели развития. Товарищи! дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Разнообразный и богатый опыт укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Повседневная практика показывает, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании форм развития.</p>
+								<div class="row">
+									<img src="images/article/pic-small.jpg" alt="pic">
+									<img src="images/article/pic-small.jpg" alt="pic">
+								</div>
+								<p>Товарищи! укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! рамки и место обучения кадров способствует подготовки и реализации новых предложений. Таким образом консультация с широким активом позволяет оценить значение форм развития. Задача организации, в особенности же сложившаяся структура организации требуют определения и уточнения новых предложений.</p>
+								<p>Таким образом начало повседневной работы по формированию позиции требуют определения и уточнения новых предложений. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение модели развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности способствует подготовки и реализации новых предложений.</p>
+								<div class="video-block js-video-block" data-video-src="https://www.youtube.com/embed/FJ1l_PV28ts">
+									<div class="video-block__pic">
+										<picture>
+											<img class="lazyload" data-src="images/video-block/pic.jpg" alt="pic">
+										</picture>
+									</div>
+								</div>
+								<p>Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации систем массового участия. Идейные соображения высшего порядка, а также укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации систем массового участия. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Задача организации, в особенности же консультация с широким активом позволяет выполнять важные задания по разработке соответствующий условий активизации. Не следует, однако забывать, что реализация намеченных плановых заданий требуют от нас анализа существенных финансовых и административных условий.</p>
+								<p>С другой стороны постоянный количественный рост и сфера нашей активности требуют определения и уточнения соответствующий условий активизации. Равным образом консультация с широким активом способствует подготовки и реализации форм развития.</p>
+							</article>
+						</div>
+						<div class="article-page__share">
+							<div class="article-page__share-wrap">
+								<div class="share">
+									<div class="share__title">Поделиться</div>
+									<div class="share__list">
+										<div class="share__icon lazyload" data-bg="images/icons/share/icon.svg">Копировать</div>
+										<div class="share__icon lazyload" data-bg="images/icons/share/icon-2.svg">Поделиться в ВКонтакте</div>
+										<div class="share__icon lazyload" data-bg="images/icons/share/icon-3.svg">Поделиться в WhatsApp </div>
+										<div class="share__icon lazyload" data-bg="images/icons/share/icon-4.svg">Поделиться в Facebook</div>
+										<div class="share__icon lazyload" data-bg="images/icons/share/icon-5.svg">Поделиться в Одноклассники</div>
+										<div class="share__icon lazyload" data-bg="images/icons/share/icon-6.svg">Поделиться в Telegram</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="article-page__other-articles">
+					<section class="articles-slider  js-articles-slider">
+						<div class="container container_smaller">
+							<div class="articles-slider__title">
+								<h2 class="title-block">Другие статьи</h2>
+							</div>
+						</div>
+						<div class="articles-slider__content">
+							<div class="container container_smaller">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<article class="article-block">
+												<div class="article-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/articles-slider/news/pic.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<h3 class="article-block__title">
+													<a href="#">Друзья, теперь мы есть в INSTAGRAM !</a>
+												</h3>
+												<div class="article-block__date">
+													<time datetime="2021-10-21">21.10.2021</time>
+												</div>
+												<div class="article-block__link">
+													<a href="#" class="detail-link">Подробнее</a>
+												</div>
+											</article>
+										</div>
+										<div class="swiper-slide">
+											<article class="article-block">
+												<div class="article-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/articles-slider/news/pic-2.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<h3 class="article-block__title">
+													<a href="#">Наш эксперт по питанию в INSTAGRAM !</a>
+												</h3>
+												<div class="article-block__date">
+													<time datetime="2021-10-14">14.10.2021</time>
+												</div>
+												<div class="article-block__link">
+													<a href="#" class="detail-link">Подробнее</a>
+												</div>
+											</article>
+										</div>
+										<div class="swiper-slide">
+											<article class="article-block">
+												<div class="article-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/articles-slider/news/pic-3.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<h3 class="article-block__title">
+													<a href="#">Запись и презентация вебинара от 20.07 доступны</a>
+												</h3>
+												<div class="article-block__date">
+													<time datetime="2021-07-22">22.07.2021</time>
+												</div>
+												<div class="article-block__link">
+													<a href="#" class="detail-link">Подробнее</a>
+												</div>
+											</article>
+										</div>
+										<div class="swiper-slide">
+											<article class="article-block">
+												<div class="article-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/articles-slider/news/pic.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<h3 class="article-block__title">
+													<a href="#">Друзья, теперь мы есть в INSTAGRAM !</a>
+												</h3>
+												<div class="article-block__date">
+													<time datetime="2021-10-21">21.10.2021</time>
+												</div>
+												<div class="article-block__link">
+													<a href="#" class="detail-link">Подробнее</a>
+												</div>
+											</article>
+										</div>
+										<div class="swiper-slide">
+											<article class="article-block">
+												<div class="article-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/articles-slider/news/pic-2.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<h3 class="article-block__title">
+													<a href="#">Наш эксперт по питанию в INSTAGRAM !</a>
+												</h3>
+												<div class="article-block__date">
+													<time datetime="2021-10-14">14.10.2021</time>
+												</div>
+												<div class="article-block__link">
+													<a href="#" class="detail-link">Подробнее</a>
+												</div>
+											</article>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="articles-slider__arrows">
+								<div class="swiper-arrow swiper-arrow_prev js-swiper-arrow-prev"></div>
+								<div class="swiper-arrow swiper-arrow_next js-swiper-arrow-next"></div>
+							</div>
+						</div>
+						<div class="articles-slider__btn">
+							<div class="container container_smaller">
+								<a href="#" class="load-more-btn">Смотреть все</a>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="article-page__subscribe">
+					<div class="container container_smaller">
+						<div class="article-page__subscribe-form">
+							<div class="subscribe-form subscribe-form_black">
+								<form action="#" class="subscribe-form__form">
+									<input type="text" class="subscribe-form__input" placeholder="e-mail">
+									<button type="button" class="subscribe-form__btn">Подписаться <span class='hide-mob'>на рассылку</span></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- /.middle -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__logo">
+						<div class="logo">
+							<a href="#" class="logo__pic">
+								<img class="lazyload" data-src="images/logo/logo-white.svg" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="footer__langs">
+						<div class="langs langs_footer">
+							<span class="langs__lang active">RUS</span>
+							<span class="langs__separate">|</span>
+							<a href="#" class="langs__lang">EN</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__middle">
+					<div class="footer-info">
+						<div class="footer-info__col">
+							<div class="footer-info__text">Москва Пресненская наб., 6, стр. 2 Башня Империя 123100</div>
+							<div class="footer-info__phone">
+								<a href="tel:+74951827777" class="phone phone_white">+7 (495) 182-77-77</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__text">Новосибирск Советская ул., 75 630132</div>
+							<div class="footer-info__phone">
+								<a href="tel:+73832855878" class="phone phone_white">+7 (383) 285-58-78</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__text">Иркутск ул. Кожова, д. 24 664022</div>
+							<div class="footer-info__phone">
+								<a href="tel:+73952480138" class="phone phone_white">+7 (3952) 48-01-38</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__socials">
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/facebook.svg" alt="facebook">
+								</a>
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/instagram.svg" alt="instagram">
+								</a>
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/dzen.svg" alt="dzen">
+								</a>
+							</div>
+							<div class="footer-info__email">
+								<a href="mailto:info@tfs.group" class="info-email">info@tfs.group</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__subscribe-form">
+					<div class="subscribe-form ">
+						<div class="subscribe-form__title">Подписаться на рассылку</div>
+						<form action="#" class="subscribe-form__form">
+							<input type="text" class="subscribe-form__input" placeholder="e-mail">
+							<button type="button" class="subscribe-form__btn">Подписаться</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer-menu">
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Главная</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Каталог</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Все продукты</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Блог</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Вебинары</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Новости</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">О компании</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Доставка и оплата</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Контакты</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Ваша корзина</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">FAQ</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copyright">©TFS Group, 2021</div>
+			</div>
+		</footer>
+	</div>
+	<!-- /.wrapper -->
+	<script src="js/article.bundle.js"></script>
+</body>
+
+</html>

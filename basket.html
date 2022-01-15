@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Basket Page</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/basket.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#bb0000">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header   js-header">
+			<div class="container">
+				<div class="header__left">
+					<div class="header__menu">
+						<div class="hamburger js-hamburger">
+							<div class="hamburger__inner"></div>
+						</div>
+					</div>
+					<div class="header__logo">
+						<div class="logo">
+							<a href="#" class="logo__pic">
+								<img class="lazyload" data-src="images/logo/logo.svg" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="header__text"> Пищевые <br> ингредиенты оптом </div>
+					<div class="header__phone hide-desk">
+						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__callback">
+						<button type="button" class="btn-orange btn-orange_callback">Заказать звонок</button>
+					</div>
+					<div class="header__phone hide-mob">
+						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
+					</div>
+					<div class="header__search">
+						<div class="search-header js-search-header">
+							<form action="#">
+								<input type="text" placeholder="Поиск" class="search-header__input js-search-header__input">
+								<button type="button" class="search-header__btn js-search-header__btn"></button>
+							</form>
+						</div>
+					</div>
+					<div class="header__langs">
+						<div class="langs ">
+							<span class="langs__lang active">RUS</span>
+							<span class="langs__separate">|</span>
+							<a href="#" class="langs__lang">EN</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="header-fixed-height-mob hide-desk"></div>
+		<div class="menu js-menu">
+			<div class="container container_space-left">
+				<div class="menu__top">
+					<div class="menu__item">
+						<a href="#" class="menu__title">Продукты</a>
+					</div>
+					<div class="menu__item">
+						<a href="#" class="menu__title">Каталог</a>
+					</div>
+					<div class="menu__item">
+						<div class="menu__title js-menu_title">Компания</div>
+						<div class="menu__content">
+							<div class="menu__sub">
+								<div class="menu__sub-link">
+									<a href="#">О нас</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Контакты</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">FAQ</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Доставка и оплата</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Новости</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Другие проекты</a>
+									<div class="menu__dropdown-wrap">
+										<div class="menu__dropdown">
+											<div class="menu__dropdown-link">
+												<a href="#">Спортивные добавки</a>
+											</div>
+											<div class="menu__dropdown-link">
+												<a href="#">Витамин К2</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu__bottom">
+					<div class="menu__col">
+						<a href="tel:+74951827777" class="phone phone_with-city">
+							<span>Москва</span> +7 (495) 182-77-77 </a>
+					</div>
+					<div class="menu__col">
+						<a href="tel:+73832855878" class="phone phone_with-city">
+							<span>Новосибирск</span> +7 (383) 285-58-78 </a>
+					</div>
+					<div class="menu__col">
+						<a href="tel:+73952480138" class="phone phone_with-city">
+							<span>Иркутск</span> +7 (3952) 48-01-38 </a>
+					</div>
+					<div class="menu__col">
+						<a href="mailto:info@tfs.group" class="menu__email">info@tfs.group</a>
+					</div>
+					<div class="menu__col">
+						<div class="menu__socials">
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/facebook.svg" alt="facebook" src="images/social-icons/facebook-grey.svg">
+							</a>
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/instagram.svg" alt="instagram" src="images/social-icons/instagram-grey.svg">
+							</a>
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/dzen.svg" alt="dzen" src="images/social-icons/dzen-grey.svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="middle">
+			<div class="basket-page">
+				<div class="basket-page__title">
+					<div class="container container_smaller">
+						<h1 class="page-title">Ваша корзина</h1>
+					</div>
+				</div>
+				<div class="basket-page__products">
+					<div class="container container_smaller">
+						<div class="basket-page__product">
+							<div class="basket-product">
+								<div class="basket-product__pic">
+									<a href="#">
+										<picture>
+											<img class="lazyload" data-src="images/basket-product/pic.jpg" alt="pic">
+										</picture>
+									</a>
+								</div>
+								<div class="basket-product__desc">
+									<div class="basket-product__name">
+										<a href="#">Функциональные молочные белки для производства сыра</a>
+									</div>
+									<div class="basket-product__count">15 упаковок</div>
+									<div class="basket-product__delivery">Доставка: <b>с 19 декабря (воскресенье)</b></div>
+								</div>
+								<div class="basket-product__price">23 090 ₽</div>
+							</div>
+						</div>
+						<div class="basket-page__product">
+							<div class="basket-product">
+								<div class="basket-product__pic">
+									<a href="#">
+										<picture>
+											<img class="lazyload" data-src="images/basket-product/pic.jpg" alt="pic">
+										</picture>
+									</a>
+								</div>
+								<div class="basket-product__desc">
+									<div class="basket-product__name">
+										<a href="#">Функциональные молочные белки для производства сыра</a>
+									</div>
+									<div class="basket-product__count">15 упаковок</div>
+									<div class="basket-product__delivery">Доставка: <b>с 19 декабря (воскресенье)</b></div>
+								</div>
+								<div class="basket-product__price">23 090 ₽</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="basket-page__form">
+					<div class="container container_smaller">
+						<div class="basket-form">
+							<form action="#">
+								<div class="basket-form__title">Контактные данные</div>
+								<div class="basket-form__row basket-form__row_small">
+									<div class="basket-form__col">
+										<div class="basket-form__input">
+											<input type="tel" class="input js-phone-mask" placeholder="+ 7 ___ ___ __ __">
+										</div>
+										<div class="basket-form__input">
+											<input type="text" class="input" placeholder="Имя">
+										</div>
+									</div>
+									<div class="basket-form__col">
+										<div class="basket-form__input">
+											<input type="email" class="input" placeholder="e-mail">
+										</div>
+										<div class="basket-form__input">
+											<input type="text" class="input" placeholder="Фамилия">
+										</div>
+									</div>
+								</div>
+								<div class="basket-form__title">Условия доставки</div>
+								<div class="basket-form__row">
+									<div class="basket-form__col">
+										<div class="basket-form__info">
+											<div class="basket-form__text">Самовывоз по адресу Московская область, Солнечногорский район, д. Есипово, c334/4</div>
+											<div class="basket-form__work-time">Пн-Сб 10:00 – 20:00</div>
+										</div>
+										<div class="basket-form__delivery">
+											<div class="basket-form__text">Доставка от 549 р.</div>
+											<div class="basket-form__input">
+												<input type="text" class="input input_radius-smaller" placeholder="Город, улица, дом, квартира">
+											</div>
+										</div>
+									</div>
+									<div class="basket-form__col">
+										<div class="basket-form__map">
+											<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4896565f7356b9e8d3e9751d1cee4fa3791fbb543d04459c6a2e81da74072a43&amp;source=constructor" frameborder="0"></iframe>
+										</div>
+									</div>
+								</div>
+								<div class="basket-form__bottom">
+									<div class="basket-form__title">Комментарий к заказу</div>
+									<div class="basket-form__textarea">
+										<textarea class="textarea"></textarea>
+									</div>
+								</div>
+								<div class="basket-form__btn">
+									<button class="btn-orange btn-orange_with-arrow">Оформить заказ</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- /.middle -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__logo">
+						<div class="logo">
+							<a href="#" class="logo__pic">
+								<img class="lazyload" data-src="images/logo/logo-white.svg" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="footer__langs">
+						<div class="langs langs_footer">
+							<span class="langs__lang active">RUS</span>
+							<span class="langs__separate">|</span>
+							<a href="#" class="langs__lang">EN</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__middle">
+					<div class="footer-info">
+						<div class="footer-info__col">
+							<div class="footer-info__text">Москва Пресненская наб., 6, стр. 2 Башня Империя 123100</div>
+							<div class="footer-info__phone">
+								<a href="tel:+74951827777" class="phone phone_white">+7 (495) 182-77-77</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__text">Новосибирск Советская ул., 75 630132</div>
+							<div class="footer-info__phone">
+								<a href="tel:+73832855878" class="phone phone_white">+7 (383) 285-58-78</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__text">Иркутск ул. Кожова, д. 24 664022</div>
+							<div class="footer-info__phone">
+								<a href="tel:+73952480138" class="phone phone_white">+7 (3952) 48-01-38</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__socials">
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/facebook.svg" alt="facebook">
+								</a>
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/instagram.svg" alt="instagram">
+								</a>
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/dzen.svg" alt="dzen">
+								</a>
+							</div>
+							<div class="footer-info__email">
+								<a href="mailto:info@tfs.group" class="info-email">info@tfs.group</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__subscribe-form">
+					<div class="subscribe-form ">
+						<div class="subscribe-form__title">Подписаться на рассылку</div>
+						<form action="#" class="subscribe-form__form">
+							<input type="text" class="subscribe-form__input" placeholder="e-mail">
+							<button type="button" class="subscribe-form__btn">Подписаться</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer-menu">
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Главная</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Каталог</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Все продукты</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Блог</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Вебинары</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Новости</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">О компании</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Доставка и оплата</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Контакты</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Ваша корзина</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">FAQ</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copyright">©TFS Group, 2021</div>
+			</div>
+		</footer>
+	</div>
+	<!-- /.wrapper -->
+	<script src="js/basket.bundle.js"></script>
+</body>
+
+</html>

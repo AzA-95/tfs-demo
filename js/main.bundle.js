@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./templates/default/src/components/adresses-block/adresses-block.js":
-/*!***************************************************************************!*\
-  !*** ./templates/default/src/components/adresses-block/adresses-block.js ***!
-  \***************************************************************************/
+/***/ "./templates/default/src/components/adresses-block-main/adresses-block-main.js":
+/*!*************************************************************************************!*\
+  !*** ./templates/default/src/components/adresses-block-main/adresses-block-main.js ***!
+  \*************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -15,12 +15,12 @@ var isPhone = window.matchMedia("(max-width: 767px)").matches ? true : false; //
 
 if (isPhone) {
   var map = document.querySelector('#map');
-  document.querySelector('.js-adresses-block__mob-map').appendChild(map);
+  document.querySelector('.js-adresses-block-main__mob-map').appendChild(map);
 } // end
 // Functional of show hide dropdown
 
 
-var titles = document.querySelectorAll('.js-adresses-block__title');
+var titles = document.querySelectorAll('.js-adresses-block-main__title');
 
 if (titles.length) {
   var arrTitles = Array.from(titles);
@@ -39,7 +39,7 @@ if (titles.length) {
       if (isPhone) {
         var _map = document.querySelector('#map');
 
-        parent.querySelector('.js-adresses-block__mob-map').appendChild(_map);
+        parent.querySelector('.js-adresses-block-main__mob-map').appendChild(_map);
       } // end
 
     });
@@ -48,7 +48,7 @@ if (titles.length) {
 // Lazy load of map
 
 
-var adressesBlock = document.querySelector('.js-adresses-block');
+var adressesBlock = document.querySelector('.js-adresses-block-main');
 
 if (adressesBlock) {
   (0,_js_lazyloadjs__WEBPACK_IMPORTED_MODULE_0__.lazyLoadJs)({
@@ -82,7 +82,7 @@ function initMap() {
   ymaps.ready(init);
 
   function init() {
-    var cities = document.querySelectorAll('.js-adresses-block__title');
+    var cities = document.querySelectorAll('.js-adresses-block-main__title');
     var initialCordinates = cities[0].dataset.cordinatesOfMap.split(","); // Создание карты.
 
     var map = new ymaps.Map("map", {
@@ -212,6 +212,39 @@ window.addEventListener('scroll', function () {
 
 /***/ }),
 
+/***/ "./templates/default/src/components/menu/menu.js":
+/*!*******************************************************!*\
+  !*** ./templates/default/src/components/menu/menu.js ***!
+  \*******************************************************/
+/***/ (() => {
+
+var body = document.body;
+var menu = document.querySelector('.js-menu');
+var titles = document.querySelectorAll('.js-menu_title');
+
+var getScrollbarWidth = function getScrollbarWidth() {
+  return window.innerWidth - document.documentElement.clientWidth;
+};
+
+Array.from(titles).forEach(function (title) {
+  title.addEventListener('click', function () {
+    title.parentNode.classList.toggle('active');
+  });
+});
+EventEmiter.on('event:hamburgerClicked', function () {
+  if (body.classList.contains('menu-open')) {
+    body.style.paddingRight = null;
+    body.classList.remove('menu-open');
+  } else {
+    body.style.paddingRight = "".concat(getScrollbarWidth(), "px");
+    body.classList.add('menu-open');
+  }
+
+  menu.classList.toggle('active');
+});
+
+/***/ }),
+
 /***/ "./templates/default/src/components/search-header/search-header.js":
 /*!*************************************************************************!*\
   !*** ./templates/default/src/components/search-header/search-header.js ***!
@@ -239,10 +272,12 @@ document.body.addEventListener('click', function (e) {
   \***************************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-// window.$ = window.jQuery = require('jQuery');
+document.body.style.setProperty("--scrollbar-width", "".concat(window.innerWidth - document.body.clientWidth, "px"));
 window.EventEmiter = __webpack_require__(/*! ../pubsub */ "./templates/default/src/js/pubsub/index.js").PubSub; // scripts of for all page
 
-__webpack_require__(/*! ../plugins/lazysizes */ "./templates/default/src/js/plugins/lazysizes/index.js"); // custom scrtipts used for all pages
+__webpack_require__(/*! ../plugins/lazysizes */ "./templates/default/src/js/plugins/lazysizes/index.js");
+
+__webpack_require__(/*! ../users/phone-mask */ "./templates/default/src/js/users/phone-mask.js"); // custom scrtipts used for all pages
 
 
 __webpack_require__(/*! ../../components/header/header */ "./templates/default/src/components/header/header.js");
@@ -250,6 +285,8 @@ __webpack_require__(/*! ../../components/header/header */ "./templates/default/s
 __webpack_require__(/*! ../../components/hamburger/hamburger */ "./templates/default/src/components/hamburger/hamburger.js");
 
 __webpack_require__(/*! ../../components/search-header/search-header */ "./templates/default/src/components/search-header/search-header.js");
+
+__webpack_require__(/*! ../../components/menu/menu */ "./templates/default/src/components/menu/menu.js");
 
 /***/ }),
 
@@ -435,6 +472,41 @@ var PubSub = {
     }
   }
 };
+
+/***/ }),
+
+/***/ "./templates/default/src/js/users/phone-mask.js":
+/*!******************************************************!*\
+  !*** ./templates/default/src/js/users/phone-mask.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lazyloadjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lazyloadjs */ "./templates/default/src/js/lazyloadjs/index.js");
+
+var elements = document.querySelectorAll('.js-phone-mask');
+
+if (elements.length) {
+  (0,_lazyloadjs__WEBPACK_IMPORTED_MODULE_0__.lazyLoadJs)({
+    targets: elements,
+    options: {
+      callback: function callback() {
+        __webpack_require__.e(/*! import() | inputmask */ "inputmask").then(__webpack_require__.bind(__webpack_require__, /*! inputmask/lib/inputmask */ "./node_modules/inputmask/lib/inputmask.js")).then(function (module) {
+          var inputmask = module.default;
+          initInputMask(inputmask);
+        });
+      }
+    }
+  });
+}
+
+function initInputMask(Inputmask) {
+  var im = new Inputmask('+7 999 999-99-99', {
+    "clearIncomplete": true
+  });
+  im.mask(elements);
+}
 
 /***/ }),
 
@@ -1232,6 +1304,18 @@ var PubSub = {
 /******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -1262,7 +1346,7 @@ var PubSub = {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + "." + "5a2ce1ce29f99c7b5515" + ".js";
+/******/ 			return "js/" + chunkId + "." + {"inputmask":"fd14ae122d9b0fe227b0","swiper":"5a2ce1ce29f99c7b5515"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -1435,7 +1519,7 @@ __webpack_require__(/*! ../layout/layout */ "./templates/default/src/js/layout/l
 
 __webpack_require__(/*! ../../components/articles-slider/articles-slider */ "./templates/default/src/components/articles-slider/articles-slider.js");
 
-__webpack_require__(/*! ../../components/adresses-block/adresses-block */ "./templates/default/src/components/adresses-block/adresses-block.js");
+__webpack_require__(/*! ../../components/adresses-block-main/adresses-block-main */ "./templates/default/src/components/adresses-block-main/adresses-block-main.js");
 })();
 
 /******/ })()

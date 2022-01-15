@@ -7,11 +7,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="css/blog.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#bb0000">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header  js-header">
+		<header class="header   js-header">
 			<div class="container">
 				<div class="header__left">
 					<div class="header__menu">
@@ -33,7 +42,7 @@
 				</div>
 				<div class="header__right">
 					<div class="header__callback">
-						<button type="button" class="btn-callback">Заказать звонок</button>
+						<button type="button" class="btn-orange btn-orange_callback">Заказать звонок</button>
 					</div>
 					<div class="header__phone hide-mob">
 						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
@@ -57,6 +66,83 @@
 			</div>
 		</header>
 		<div class="header-fixed-height-mob hide-desk"></div>
+		<div class="menu js-menu">
+			<div class="container container_space-left">
+				<div class="menu__top">
+					<div class="menu__item">
+						<a href="#" class="menu__title">Продукты</a>
+					</div>
+					<div class="menu__item">
+						<a href="#" class="menu__title">Каталог</a>
+					</div>
+					<div class="menu__item">
+						<div class="menu__title js-menu_title">Компания</div>
+						<div class="menu__content">
+							<div class="menu__sub">
+								<div class="menu__sub-link">
+									<a href="#">О нас</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Контакты</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">FAQ</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Доставка и оплата</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Новости</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Другие проекты</a>
+									<div class="menu__dropdown-wrap">
+										<div class="menu__dropdown">
+											<div class="menu__dropdown-link">
+												<a href="#">Спортивные добавки</a>
+											</div>
+											<div class="menu__dropdown-link">
+												<a href="#">Витамин К2</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu__bottom">
+					<div class="menu__col">
+						<a href="tel:+74951827777" class="phone phone_with-city">
+							<span>Москва</span> +7 (495) 182-77-77 </a>
+					</div>
+					<div class="menu__col">
+						<a href="tel:+73832855878" class="phone phone_with-city">
+							<span>Новосибирск</span> +7 (383) 285-58-78 </a>
+					</div>
+					<div class="menu__col">
+						<a href="tel:+73952480138" class="phone phone_with-city">
+							<span>Иркутск</span> +7 (3952) 48-01-38 </a>
+					</div>
+					<div class="menu__col">
+						<a href="mailto:info@tfs.group" class="menu__email">info@tfs.group</a>
+					</div>
+					<div class="menu__col">
+						<div class="menu__socials">
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/facebook.svg" alt="facebook" src="images/social-icons/facebook-grey.svg">
+							</a>
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/instagram.svg" alt="instagram" src="images/social-icons/instagram-grey.svg">
+							</a>
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/dzen.svg" alt="dzen" src="images/social-icons/dzen-grey.svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<main class="middle">
 			<div class="blog-page">
 				<div class="blog-page__title">
@@ -79,7 +165,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -97,7 +185,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic-2.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic-2.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -115,7 +205,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic-3.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic-3.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -133,7 +225,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -151,7 +245,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -169,7 +265,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic-2.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic-2.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -187,7 +285,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic-3.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic-3.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -205,7 +305,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -223,7 +325,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -241,7 +345,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic-2.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic-2.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -259,7 +365,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic-3.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic-3.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -277,7 +385,9 @@
 									<article class="article-block">
 										<div class="article-block__pic">
 											<a href="#">
-												<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												<picture>
+													<img class="lazyload" data-src="images/articles/pic.jpg" alt="pic">
+												</picture>
 											</a>
 										</div>
 										<h3 class="article-block__title">
@@ -358,7 +468,7 @@
 					</div>
 				</div>
 				<div class="footer__subscribe-form">
-					<div class="subscribe-form">
+					<div class="subscribe-form ">
 						<div class="subscribe-form__title">Подписаться на рассылку</div>
 						<form action="#" class="subscribe-form__form">
 							<input type="text" class="subscribe-form__input" placeholder="e-mail">

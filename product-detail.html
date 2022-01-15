@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Product detail Page</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/product-detail.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#bb0000">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header  header_detail js-header">
+			<div class="container">
+				<div class="header__left">
+					<div class="header__menu">
+						<div class="hamburger js-hamburger">
+							<div class="hamburger__inner"></div>
+						</div>
+					</div>
+					<div class="header__logo">
+						<div class="logo">
+							<a href="#" class="logo__pic">
+								<img class="lazyload" data-src="images/logo/logo.svg" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="header__text"> Пищевые <br> ингредиенты оптом </div>
+					<div class="header__phone hide-desk">
+						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__callback">
+						<button type="button" class="btn-orange btn-orange_callback">Заказать звонок</button>
+					</div>
+					<div class="header__phone hide-mob">
+						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
+					</div>
+					<div class="header__search">
+						<div class="search-header js-search-header">
+							<form action="#">
+								<input type="text" placeholder="Поиск" class="search-header__input js-search-header__input">
+								<button type="button" class="search-header__btn js-search-header__btn"></button>
+							</form>
+						</div>
+					</div>
+					<div class="header__langs">
+						<div class="langs ">
+							<span class="langs__lang active">RUS</span>
+							<span class="langs__separate">|</span>
+							<a href="#" class="langs__lang">EN</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="header-fixed-height-mob hide-desk"></div>
+		<div class="menu js-menu">
+			<div class="container container_space-left">
+				<div class="menu__top">
+					<div class="menu__item">
+						<a href="#" class="menu__title">Продукты</a>
+					</div>
+					<div class="menu__item">
+						<a href="#" class="menu__title">Каталог</a>
+					</div>
+					<div class="menu__item">
+						<div class="menu__title js-menu_title">Компания</div>
+						<div class="menu__content">
+							<div class="menu__sub">
+								<div class="menu__sub-link">
+									<a href="#">О нас</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Контакты</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">FAQ</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Доставка и оплата</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Новости</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Другие проекты</a>
+									<div class="menu__dropdown-wrap">
+										<div class="menu__dropdown">
+											<div class="menu__dropdown-link">
+												<a href="#">Спортивные добавки</a>
+											</div>
+											<div class="menu__dropdown-link">
+												<a href="#">Витамин К2</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu__bottom">
+					<div class="menu__col">
+						<a href="tel:+74951827777" class="phone phone_with-city">
+							<span>Москва</span> +7 (495) 182-77-77 </a>
+					</div>
+					<div class="menu__col">
+						<a href="tel:+73832855878" class="phone phone_with-city">
+							<span>Новосибирск</span> +7 (383) 285-58-78 </a>
+					</div>
+					<div class="menu__col">
+						<a href="tel:+73952480138" class="phone phone_with-city">
+							<span>Иркутск</span> +7 (3952) 48-01-38 </a>
+					</div>
+					<div class="menu__col">
+						<a href="mailto:info@tfs.group" class="menu__email">info@tfs.group</a>
+					</div>
+					<div class="menu__col">
+						<div class="menu__socials">
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/facebook.svg" alt="facebook" src="images/social-icons/facebook-grey.svg">
+							</a>
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/instagram.svg" alt="instagram" src="images/social-icons/instagram-grey.svg">
+							</a>
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/dzen.svg" alt="dzen" src="images/social-icons/dzen-grey.svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="middle">
+			<div class="product-detail">
+				<div class="container">
+					<div class="product-detail__row">
+						<div class="product-detail__col">
+							<div class="product-detail__sticky">
+								<div class="product-detail-rotate">
+									<div class="product-detail-rotate__vertical">Пищевая промышленность</div>
+									<div class="product-detail-rotate__list">
+										<a href="#" class="product-detail-rotate__link">Молочная</a>
+										<a href="#" class="product-detail-rotate__link">Кондитерская и хлебобулочная</a>
+										<a href="#" class="product-detail-rotate__link">Мясная и рыбная</a>
+										<a href="#" class="product-detail-rotate__link">Масложировая</a>
+									</div>
+								</div>
+								<div class="product-detail__pic">
+									<picture>
+										<img class="lazyload" data-src="images/product-detail/pic.jpg" alt="pic">
+									</picture>
+								</div>
+							</div>
+						</div>
+						<div class="product-detail__col">
+							<h1 class="product-detail__title">Фруктоолигосахариды (ФОС) / олигофруктоза</h1>
+							<div class="product-detail__breadcrumbs">
+								<ul class="breadcrumbs">
+									<li class="breadcrumbs__item">
+										<a href="#" class="breadcrumbs__text">Молочная</a>
+									</li>
+									<li class="breadcrumbs__item">
+										<a href="#" class="breadcrumbs__text">Пищевая промышленность </a>
+									</li>
+									<li class="breadcrumbs__item">
+										<span class="breadcrumbs__text">Молочная</span>
+									</li>
+								</ul>
+							</div>
+							<div class="product-detail__desc">
+								<p>Фруктоолигосахариды GOFOS в виде порошка или сиропа от израильского производителя ФОС - компании GALAM. Это растворимые пищевые волокна с пребиотическим эффектом. Являются одним из самых перспективных пребиотиков, а также частью натуральных решений по снижению сахара. В отличие от обычной олигофруктозы, фруктоолигосахариды GOFOS получают не путем гидролиза инулина, а уникальным методом ферментации сахарной свеклы. Производятся на новейшем заводе компании Galam (с инвестициями в строительство - около 20 млн. долларов).</p>
+								<p>Фруктоолигосахариды GOFOS обладают существенными преимуществами в сравнении с обычной олигофруктозой или инулином:</p>
+								<p>GOFOS полностью состоят из коротких цепочек ФОС, что повышает пребиотический эффект и способствует развитию</p>
+								<p>Фруктоолигосахариды GOFOS в виде порошка или сиропа от израильского производителя ФОС - компании GALAM. Это растворимые пищевые волокна с пребиотическим эффектом. Являются одним из самых перспективных пребиотиков, а также частью натуральных решений по снижению сахара. В отличие от обычной олигофруктозы, фруктоолигосахариды GOFOS получают не путем гидролиза инулина, а уникальным методом ферментации сахарной свеклы. Производятся на новейшем заводе компании Galam (с инвестициями в строительство - около 20 млн. долларов).</p>
+								<p>Фруктоолигосахариды GOFOS обладают существенными преимуществами в сравнении с обычной олигофруктозой или инулином:</p>
+								<p>GOFOS полностью состоят из коротких цепочек ФОС, что повышает пребиотический эффект и способствует развитию</p>
+								<p>Фруктоолигосахариды GOFOS в виде порошка или сиропа от израильского производителя ФОС - компании GALAM. Это растворимые пищевые волокна с пребиотическим эффектом. Являются одним из самых перспективных пребиотиков, а также частью натуральных решений по снижению сахара. В отличие от обычной олигофруктозы, фруктоолигосахариды GOFOS получают не путем гидролиза инулина, а уникальным методом ферментации сахарной свеклы. Производятся на новейшем заводе компании Galam (с инвестициями в строительство - около 20 млн. долларов).</p>
+								<p>Фруктоолигосахариды GOFOS обладают существенными преимуществами в сравнении с обычной олигофруктозой или инулином:</p>
+								<p>GOFOS полностью состоят из коротких цепочек ФОС, что повышает пребиотический эффект и способствует развитию</p>
+							</div>
+							<div class="product-detail__btns-vs-price">
+								<button class="product-detail__btn product-detail__btn_orange">В корзину</button>
+								<button class="product-detail__btn">Оставить заявку</button>
+								<div class="product-detail__price">от 600 руб. / кг <br> с НДС (порошок)</div>
+							</div>
+							<div class="product-detail__accordions">
+								<div class="accordion">
+									<div class="accordion__title js-accordion__title">Срок хранения и упаковка</div>
+									<div class="accordion__content">
+										<div class="accordion__text">С другой стороны постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки систем массового участия. Задача организации, в особенности же реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании систем массового участия. Таким образом постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.</div>
+									</div>
+								</div>
+								<div class="accordion">
+									<div class="accordion__title js-accordion__title">Сфера применения</div>
+									<div class="accordion__content">
+										<div class="accordion__text">С другой стороны постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки систем массового участия. Задача организации, в особенности же реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании систем массового участия. Таким образом постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.</div>
+									</div>
+								</div>
+								<div class="accordion">
+									<div class="accordion__title js-accordion__title">Условия доставки и оплаты</div>
+									<div class="accordion__content">
+										<div class="accordion__text">С другой стороны постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки систем массового участия. Задача организации, в особенности же реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании систем массового участия. Таким образом постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-detail__products">
+								<div class="product-detail__products-title">Вам может быть интересно</div>
+								<div class="product-detail__products-row js-product-detail__products-row">
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="product product_small">
+													<div class="product__pic">
+														<a href="#">
+															<picture>
+																<img class="lazyload" data-src=" images/product/pic.jpg " alt="product">
+															</picture>
+														</a>
+													</div>
+													<div class="product__desc">
+														<a href="#" class="product__name">Функциональные молочные белки для производства сыра</a>
+													</div>
+													<button class="product__add-to-cart"> Добавить в корзину </button>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="product product_small">
+													<div class="product__pic">
+														<a href="#">
+															<picture>
+																<img class="lazyload" data-src=" images/product/pic.jpg " alt="product">
+															</picture>
+														</a>
+													</div>
+													<div class="product__desc">
+														<a href="#" class="product__name">Концентрат сывороточных белков Lacprodan®</a>
+													</div>
+													<button class="product__add-to-cart"> Добавить в корзину </button>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="product product_small">
+													<div class="product__pic">
+														<a href="#">
+															<picture>
+																<img class="lazyload" data-src=" images/product/pic.jpg " alt="product">
+															</picture>
+														</a>
+													</div>
+													<div class="product__desc">
+														<a href="#" class="product__name">​Концентрат молочных белков с содержанием белка 80%</a>
+													</div>
+													<button class="product__add-to-cart"> Добавить в корзину </button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="product-detail__products-arrows hide-desk">
+										<div class="swiper-arrow swiper-arrow_prev js-swiper-arrow-prev"></div>
+										<div class="swiper-arrow swiper-arrow_next js-swiper-arrow-next"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- /.middle -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__logo">
+						<div class="logo">
+							<a href="#" class="logo__pic">
+								<img class="lazyload" data-src="images/logo/logo-white.svg" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="footer__langs">
+						<div class="langs langs_footer">
+							<span class="langs__lang active">RUS</span>
+							<span class="langs__separate">|</span>
+							<a href="#" class="langs__lang">EN</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__middle">
+					<div class="footer-info">
+						<div class="footer-info__col">
+							<div class="footer-info__text">Москва Пресненская наб., 6, стр. 2 Башня Империя 123100</div>
+							<div class="footer-info__phone">
+								<a href="tel:+74951827777" class="phone phone_white">+7 (495) 182-77-77</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__text">Новосибирск Советская ул., 75 630132</div>
+							<div class="footer-info__phone">
+								<a href="tel:+73832855878" class="phone phone_white">+7 (383) 285-58-78</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__text">Иркутск ул. Кожова, д. 24 664022</div>
+							<div class="footer-info__phone">
+								<a href="tel:+73952480138" class="phone phone_white">+7 (3952) 48-01-38</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__socials">
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/facebook.svg" alt="facebook">
+								</a>
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/instagram.svg" alt="instagram">
+								</a>
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/dzen.svg" alt="dzen">
+								</a>
+							</div>
+							<div class="footer-info__email">
+								<a href="mailto:info@tfs.group" class="info-email">info@tfs.group</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__subscribe-form">
+					<div class="subscribe-form ">
+						<div class="subscribe-form__title">Подписаться на рассылку</div>
+						<form action="#" class="subscribe-form__form">
+							<input type="text" class="subscribe-form__input" placeholder="e-mail">
+							<button type="button" class="subscribe-form__btn">Подписаться</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer-menu">
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Главная</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Каталог</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Все продукты</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Блог</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Вебинары</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Новости</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">О компании</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Доставка и оплата</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Контакты</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Ваша корзина</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">FAQ</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copyright">©TFS Group, 2021</div>
+			</div>
+		</footer>
+	</div>
+	<!-- /.wrapper -->
+	<script src="js/product-detail.bundle.js"></script>
+</body>
+
+</html>

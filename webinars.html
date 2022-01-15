@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Webinars Page</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/webinars.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#bb0000">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header   js-header">
+			<div class="container">
+				<div class="header__left">
+					<div class="header__menu">
+						<div class="hamburger js-hamburger">
+							<div class="hamburger__inner"></div>
+						</div>
+					</div>
+					<div class="header__logo">
+						<div class="logo">
+							<a href="#" class="logo__pic">
+								<img class="lazyload" data-src="images/logo/logo.svg" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="header__text"> Пищевые <br> ингредиенты оптом </div>
+					<div class="header__phone hide-desk">
+						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__callback">
+						<button type="button" class="btn-orange btn-orange_callback">Заказать звонок</button>
+					</div>
+					<div class="header__phone hide-mob">
+						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
+					</div>
+					<div class="header__search">
+						<div class="search-header js-search-header">
+							<form action="#">
+								<input type="text" placeholder="Поиск" class="search-header__input js-search-header__input">
+								<button type="button" class="search-header__btn js-search-header__btn"></button>
+							</form>
+						</div>
+					</div>
+					<div class="header__langs">
+						<div class="langs ">
+							<span class="langs__lang active">RUS</span>
+							<span class="langs__separate">|</span>
+							<a href="#" class="langs__lang">EN</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="header-fixed-height-mob hide-desk"></div>
+		<div class="menu js-menu">
+			<div class="container container_space-left">
+				<div class="menu__top">
+					<div class="menu__item">
+						<a href="#" class="menu__title">Продукты</a>
+					</div>
+					<div class="menu__item">
+						<a href="#" class="menu__title">Каталог</a>
+					</div>
+					<div class="menu__item">
+						<div class="menu__title js-menu_title">Компания</div>
+						<div class="menu__content">
+							<div class="menu__sub">
+								<div class="menu__sub-link">
+									<a href="#">О нас</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Контакты</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">FAQ</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Доставка и оплата</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Новости</a>
+								</div>
+								<div class="menu__sub-link">
+									<a href="#">Другие проекты</a>
+									<div class="menu__dropdown-wrap">
+										<div class="menu__dropdown">
+											<div class="menu__dropdown-link">
+												<a href="#">Спортивные добавки</a>
+											</div>
+											<div class="menu__dropdown-link">
+												<a href="#">Витамин К2</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu__bottom">
+					<div class="menu__col">
+						<a href="tel:+74951827777" class="phone phone_with-city">
+							<span>Москва</span> +7 (495) 182-77-77 </a>
+					</div>
+					<div class="menu__col">
+						<a href="tel:+73832855878" class="phone phone_with-city">
+							<span>Новосибирск</span> +7 (383) 285-58-78 </a>
+					</div>
+					<div class="menu__col">
+						<a href="tel:+73952480138" class="phone phone_with-city">
+							<span>Иркутск</span> +7 (3952) 48-01-38 </a>
+					</div>
+					<div class="menu__col">
+						<a href="mailto:info@tfs.group" class="menu__email">info@tfs.group</a>
+					</div>
+					<div class="menu__col">
+						<div class="menu__socials">
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/facebook.svg" alt="facebook" src="images/social-icons/facebook-grey.svg">
+							</a>
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/instagram.svg" alt="instagram" src="images/social-icons/instagram-grey.svg">
+							</a>
+							<a href="#" class="menu__social">
+								<img class=" lazyloaded" data-src="images/social-icons/dzen.svg" alt="dzen" src="images/social-icons/dzen-grey.svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="middle">
+			<div class="webinars-page">
+				<div class="webinars-page__title">
+					<div class="container container_smaller">
+						<div class="page-title-dropdown">
+							<h1 class="page-title js-page-title-dropdown__title">Вебинары</h1>
+							<div class="page-title-dropdown__items">
+								<a href="#">Статьи</a>
+								<a href="#">Новости</a>
+								<a href="#">Блог</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="webinars-page__tags">
+					<div class="tags">
+						<div class="container">
+							<div class="tags__row hide-mob">
+								<div class="tags__col">
+									<a href="#" class="tags__link  active ">Все направления</a>
+								</div>
+								<div class="tags__col">
+									<a href="#" class="tags__link ">Название</a>
+								</div>
+								<div class="tags__col">
+									<a href="#" class="tags__link ">Название</a>
+								</div>
+								<div class="tags__col">
+									<a href="#" class="tags__link ">Название</a>
+								</div>
+								<div class="tags__col">
+									<a href="#" class="tags__link ">Название</a>
+								</div>
+								<div class="tags__col">
+									<a href="#" class="tags__link ">Название</a>
+								</div>
+								<div class="tags__col">
+									<a href="#" class="tags__link ">Название</a>
+								</div>
+								<div class="tags__col">
+									<a href="#" class="tags__link ">Название</a>
+								</div>
+							</div>
+							<div class="tags__select hide-desk">
+								<select name="tags">
+									<option value="1">Все направления</option>
+									<option value="1">Название</option>
+									<option value="1">Название</option>
+									<option value="1">Название</option>
+									<option value="1">Название</option>
+									<option value="1">Название</option>
+									<option value="1">Название</option>
+									<option value="1">Название</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="webinars-page__mob-btns hide-desk">
+					<div class="container">
+						<div class="webinars-page__mob-btn-filter">Фильтры</div>
+						<div class="webinars-page__mob-btn-search">Поиск</div>
+					</div>
+				</div>
+				<div class="webinars-page__search">
+					<div class="container">
+						<div class="search-small">
+							<form action="#" class="search-small__form">
+								<input type="text" class="search-small__input">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="webinars-page__row">
+					<div class="container">
+						<div class="webinars-page__filter">
+							<div class="filter">
+								<div class="filter-block">
+									<div class="filter-block__label">Тематика</div>
+									<div class="filter-block__list">
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" checked="true"" class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="filter-block">
+									<div class="filter-block__label">Тематика</div>
+									<div class="filter-block__list">
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="filter-block">
+									<div class="filter-block__label">Тематика</div>
+									<div class="filter-block__list">
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="filter-block">
+									<div class="filter-block__label">Тематика</div>
+									<div class="filter-block__list">
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+										<div class="filter-block__checkbox">
+											<label class="checkbox">
+												<input type="checkbox" " class=" checkbox__input">
+												<span class="checkbox__icon"></span>
+												<span class="checkbox__text">Название</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="webinars-page__webinars">
+							<div class="webinars-page__webinars-count">21 вебинар</div>
+							<div class="webinars">
+								<div class="container">
+									<div class="webinars__row">
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Наш эксперт по питанию в INSTAGRAM !</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-10-14">14.10.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic-2.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Запись и презентация вебинара от 20.07 доступны</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-07-22">22.07.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic-3.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Друзья, теперь мы есть в INSTAGRAM !</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-10-27">27.10.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Наш эксперт по питанию в INSTAGRAM !</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-10-14">14.10.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic-2.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Запись и презентация вебинара от 20.07 доступны</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-07-22">22.07.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic-3.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Друзья, теперь мы есть в INSTAGRAM !</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-10-27">27.10.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Наш эксперт по питанию в INSTAGRAM !</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-10-14">14.10.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic-2.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Запись и презентация вебинара от 20.07 доступны</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-07-22">22.07.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic-3.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Друзья, теперь мы есть в INSTAGRAM !</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-10-27">27.10.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Наш эксперт по питанию в INSTAGRAM !</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-10-14">14.10.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic-2.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Запись и презентация вебинара от 20.07 доступны</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-07-22">22.07.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<div class="webinars__col">
+											<article class="webinar-block">
+												<div class="webinar-block__pic">
+													<a href="#">
+														<picture>
+															<img class="lazyload" data-src="images/webinars/pic-3.jpg" alt="pic">
+														</picture>
+													</a>
+												</div>
+												<div class="webinar-block__desc">
+													<h3 class="webinar-block__title">
+														<a href="#">Друзья, теперь мы есть в INSTAGRAM !</a>
+													</h3>
+													<div class="webinar-block__bottom">
+														<div class="webinar-block__date">
+															<time datetime="2021-10-27">27.10.2021</time>
+														</div>
+														<div class="webinar-block__views">236</div>
+													</div>
+												</div>
+											</article>
+										</div>
+									</div>
+									<div class="webinars__load-more">
+										<a href="#" class="load-more-btn">Еще 52 вебинара</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- /.middle -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__logo">
+						<div class="logo">
+							<a href="#" class="logo__pic">
+								<img class="lazyload" data-src="images/logo/logo-white.svg" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="footer__langs">
+						<div class="langs langs_footer">
+							<span class="langs__lang active">RUS</span>
+							<span class="langs__separate">|</span>
+							<a href="#" class="langs__lang">EN</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__middle">
+					<div class="footer-info">
+						<div class="footer-info__col">
+							<div class="footer-info__text">Москва Пресненская наб., 6, стр. 2 Башня Империя 123100</div>
+							<div class="footer-info__phone">
+								<a href="tel:+74951827777" class="phone phone_white">+7 (495) 182-77-77</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__text">Новосибирск Советская ул., 75 630132</div>
+							<div class="footer-info__phone">
+								<a href="tel:+73832855878" class="phone phone_white">+7 (383) 285-58-78</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__text">Иркутск ул. Кожова, д. 24 664022</div>
+							<div class="footer-info__phone">
+								<a href="tel:+73952480138" class="phone phone_white">+7 (3952) 48-01-38</a>
+							</div>
+						</div>
+						<div class="footer-info__col">
+							<div class="footer-info__socials">
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/facebook.svg" alt="facebook">
+								</a>
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/instagram.svg" alt="instagram">
+								</a>
+								<a href="#" class="footer-info__social">
+									<img class="lazyload" data-src="images/social-icons/dzen.svg" alt="dzen">
+								</a>
+							</div>
+							<div class="footer-info__email">
+								<a href="mailto:info@tfs.group" class="info-email">info@tfs.group</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__subscribe-form">
+					<div class="subscribe-form ">
+						<div class="subscribe-form__title">Подписаться на рассылку</div>
+						<form action="#" class="subscribe-form__form">
+							<input type="text" class="subscribe-form__input" placeholder="e-mail">
+							<button type="button" class="subscribe-form__btn">Подписаться</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer-menu">
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Главная</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Каталог</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Все продукты</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Блог</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Вебинары</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Новости</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">О компании</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Доставка и оплата</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Контакты</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">Ваша корзина</a>
+						</div>
+						<div class="footer-menu__item">
+							<a href="#" class="footer-menu__link">FAQ</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copyright">©TFS Group, 2021</div>
+			</div>
+		</footer>
+	</div>
+	<!-- /.wrapper -->
+	<script src="js/webinars.bundle.js"></script>
+</body>
+
+</html>
