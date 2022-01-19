@@ -100,6 +100,8 @@ window.EventEmiter = __webpack_require__(/*! ../pubsub */ "./templates/default/s
 
 __webpack_require__(/*! ../plugins/lazysizes */ "./templates/default/src/js/plugins/lazysizes/index.js");
 
+__webpack_require__(/*! ../plugins/popup/popup */ "./templates/default/src/js/plugins/popup/popup.js");
+
 __webpack_require__(/*! ../users/phone-mask */ "./templates/default/src/js/users/phone-mask.js"); // custom scrtipts used for all pages
 
 
@@ -110,6 +112,8 @@ __webpack_require__(/*! ../../components/hamburger/hamburger */ "./templates/def
 __webpack_require__(/*! ../../components/search-header/search-header */ "./templates/default/src/components/search-header/search-header.js");
 
 __webpack_require__(/*! ../../components/menu/menu */ "./templates/default/src/components/menu/menu.js");
+
+window.globalPopup = new Popup();
 
 /***/ }),
 
@@ -251,6 +255,288 @@ lazySizesConfig.expand = 1000;
 
 /***/ }),
 
+/***/ "./templates/default/src/js/plugins/popup/popup.js":
+/*!*********************************************************!*\
+  !*** ./templates/default/src/js/plugins/popup/popup.js ***!
+  \*********************************************************/
+/***/ (() => {
+
+;
+
+(function (global) {
+  var bugIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  var ie10 = navigator.appVersion.indexOf("MSIE 10") !== -1 ? true : false;
+  var ie9 = navigator.appVersion.indexOf("MSIE 9") !== -1 ? true : false;
+
+  var createElement = function createElement(cls, parent) {
+    var obj = document.createElement('div');
+    obj.className = cls;
+
+    if (parent) {
+      parent.appendChild(obj);
+    }
+
+    return obj;
+  };
+
+  function Popup() {
+    this.tags = {};
+    this.tags.popup = createElement('popup' + (ie10 ? ' popup_ie10' : '') + (ie9 ? ' popup_ie9' : ''), document.body);
+    this.tags.popup__overlay = createElement('popup__overlay', this.tags.popup);
+    this.tags.popup__table = createElement('popup__table', this.tags.popup);
+    this.tags.popup__cell = createElement('popup__cell', this.tags.popup__table);
+    this.tags.popup__block = createElement('popup__block', this.tags.popup__cell);
+    this.tags.popup__close = createElement('popup__close', this.tags.popup__block);
+    this.tags.popup__change = createElement('popup__change', this.tags.popup__block);
+    this.eventsTrigger = 'click';
+    this.events();
+    this.scrollWidth = this.scrollWidthElement();
+    this.defaults = {
+      clearClose: true,
+      bodyHidden: true,
+      addClassNamePopup: '',
+      closeOverlay: true,
+      closeShow: true,
+      background: '',
+      closeButtons: '',
+      offsetY: 0,
+      offsetX: 0,
+      coordElement: ''
+    };
+  }
+
+  Popup.prototype = {
+    isOpen: false,
+    options: function options(opts) {
+      this.defaults = this.extend({
+        clearClose: true,
+        bodyHidden: true,
+        addClassNamePopup: '',
+        closeOverlay: true,
+        closeShow: true,
+        background: '',
+        closeButtons: '',
+        offsetY: 0,
+        offsetX: 0,
+        coordElement: ''
+      }, opts);
+
+      if (this.defaults.background) {
+        this.tags.popup.style.background = this.defaults.background;
+      }
+
+      return this;
+    },
+    extend: function extend(defaults, source) {
+      for (var key in source) {
+        if (source.hasOwnProperty(key)) {
+          defaults[key] = source[key];
+        }
+      }
+
+      return defaults;
+    },
+    addCloseButtons: function addCloseButtons() {
+      var obj = this;
+      var buttons = this.defaults.closeButtons.split(',');
+      buttons.forEach(function (item, index) {
+        var selectors = document.querySelectorAll(item.replace(/\s+/g, ''));
+        Array.prototype.forEach.call(selectors, function (element, i) {
+          element.addEventListener(obj.eventsTrigger, function (e) {
+            e.preventDefault();
+            obj.close(obj.defaults.clearClose ? 'clear' : null);
+            return false;
+          }, false);
+        });
+      });
+    },
+    coordSet: function coordSet() {
+      var obj = this;
+      var button = document.querySelector(this.defaults.coordElement);
+
+      if (button) {
+        this.coords = button.getBoundingClientRect();
+        this.tags.popup__block.style.left = (this.defaults.bodyHidden ? 0 : window.pageXOffset) + this.coords.left + this.defaults.offsetX + 'px';
+        this.tags.popup__block.style.top = (this.defaults.bodyHidden ? 0 : window.pageYOffset) + this.coords.top + this.defaults.offsetY + 'px';
+        this.tags.popup__block.style.position = 'absolute';
+      }
+
+      return this;
+    },
+    coordReset: function coordReset() {
+      var obj = this;
+      this.defaults = {
+        clearClose: true,
+        bodyHidden: true,
+        addClassNamePopup: '',
+        closeOverlay: true,
+        closeShow: true,
+        background: '',
+        closeButtons: '',
+        offsetY: 0,
+        offsetX: 0,
+        coordElement: ''
+      };
+      setTimeout(function () {
+        obj.tags.popup.style.background = '';
+      }, 500); // указан в файле стилей transition
+
+      this.tags.popup__block.style.left = '';
+      this.tags.popup__block.style.top = '';
+      this.tags.popup__block.style.position = '';
+      return this;
+    },
+    setBodyStyle: function setBodyStyle() {
+      var trigger = window.innerHeight < document.body.scrollHeight;
+
+      if (this.defaults.bodyHidden) {
+        document.body.classList.add('popup__body_hidden');
+
+        if (trigger) {
+          document.body.style.paddingRight = this.scrollWidth + 'px';
+        }
+      }
+
+      return this;
+    },
+    clearBodyStyle: function clearBodyStyle() {
+      document.body.classList.remove('popup__body_hidden');
+      document.body.style.paddingRight = '';
+      return this;
+    },
+    html: function html(response, callback) {
+      this.tags.popup__change.innerHTML = response;
+
+      if (callback) {
+        callback.call(this.tags.popup, this.defaults, this.eventsTrigger);
+      }
+
+      return this;
+    },
+    append: function append(response, callback) {
+      this.tags.popup__change.innerHTML = response;
+
+      if (callback) {
+        callback.call(this.tags.popup, this.defaults, this.eventsTrigger);
+      }
+
+      if (this.defaults.closeButtons) {
+        this.addCloseButtons();
+      }
+
+      return this;
+    },
+    clear: function clear(_clear) {
+      if (this.defaults.clearClose || _clear) {
+        this.tags.popup__change.innerHTML = '';
+      }
+
+      return this;
+    },
+    show: function show(callback) {
+      this.isOpen = true;
+      this.offsetTop = window.pageYOffset;
+      document.body.style.top = this.offsetTop * -1 + 'px';
+      this.tags.popup.className = 'popup';
+
+      if (bugIOS) {
+        document.documentElement.classList.add('popup_iphone');
+      }
+
+      if (this.defaults.closeShow) {
+        this.tags.popup__close.style.display = '';
+      } else {
+        this.tags.popup__close.style.display = 'none';
+      }
+
+      this.setBodyStyle();
+
+      if (this.defaults.coordElement) {
+        this.coordSet();
+      }
+
+      if (this.defaults.closeButtons) {
+        this.addCloseButtons();
+      }
+
+      if (this.defaults.addClassNamePopup) {
+        this.tags.popup.classList.add(this.defaults.addClassNamePopup);
+      }
+
+      this.tags.popup.classList.add('popup_active');
+
+      if (callback) {
+        callback.call(this.tags.popup, this.defaults, this.eventsTrigger);
+      }
+
+      return this;
+    },
+    close: function close(clear, callback) {
+      var obj = this;
+      setTimeout(function () {
+        obj.tags.popup.classList.remove('popup_active');
+
+        if (bugIOS) {
+          document.documentElement.classList.remove('popup_iphone');
+        }
+
+        if (obj.defaults.addClassNamePopup) {
+          obj.tags.popup.classList.remove(obj.defaults.addClassNamePopup);
+        }
+
+        if (clear == 'clear') {
+          obj.tags.popup__change.innerHTML = '';
+        }
+
+        obj.coordReset();
+
+        if (callback) {
+          callback.call(obj.tags.popup, obj.defaults, obj.eventsTrigger);
+        }
+
+        obj.clearBodyStyle();
+        obj.isOpen = false;
+        document.body.style.top = '';
+        window.scrollTo(0, obj.offsetTop);
+      }, 50);
+      return this;
+    },
+    events: function events() {
+      var obj = this;
+      this.tags.popup__close.addEventListener(this.eventsTrigger, function (e) {
+        obj.close(obj.defaults.clearClose ? 'clear' : null);
+        return false;
+      }, false);
+      this.tags.popup__overlay.addEventListener(this.eventsTrigger, function (e) {
+        if (obj.defaults.closeOverlay) {
+          obj.close(obj.defaults.clearClose ? 'clear' : null);
+        }
+
+        return false;
+      }, false);
+      document.addEventListener('keydown', function (e) {
+        if (e.which == 27) {
+          obj.close(obj.defaults.clearClose ? 'clear' : null);
+        }
+      }, false);
+    },
+    scrollWidthElement: function scrollWidthElement() {
+      var div = document.createElement("div");
+      div.style.overflowY = "scroll";
+      div.style.width = "50px";
+      div.style.height = "50px";
+      div.style.visibility = "hidden";
+      document.body.appendChild(div);
+      var scrollWidth = div.offsetWidth - div.clientWidth;
+      document.body.removeChild(div);
+      return scrollWidth;
+    }
+  };
+  window.Popup = Popup;
+})(window);
+
+/***/ }),
+
 /***/ "./templates/default/src/js/pubsub/index.js":
 /*!**************************************************!*\
   !*** ./templates/default/src/js/pubsub/index.js ***!
@@ -308,28 +594,33 @@ var PubSub = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lazyloadjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lazyloadjs */ "./templates/default/src/js/lazyloadjs/index.js");
 
-var elements = document.querySelectorAll('.js-phone-mask');
 
-if (elements.length) {
-  (0,_lazyloadjs__WEBPACK_IMPORTED_MODULE_0__.lazyLoadJs)({
-    targets: elements,
-    options: {
-      callback: function callback() {
-        __webpack_require__.e(/*! import() | inputmask */ "inputmask").then(__webpack_require__.bind(__webpack_require__, /*! inputmask/lib/inputmask */ "./node_modules/inputmask/lib/inputmask.js")).then(function (module) {
-          var inputmask = module.default;
-          initInputMask(inputmask);
-        });
+window.globalFuncInitInputMask = function () {
+  var elements = document.querySelectorAll('.js-phone-mask');
+
+  if (elements.length) {
+    (0,_lazyloadjs__WEBPACK_IMPORTED_MODULE_0__.lazyLoadJs)({
+      targets: elements,
+      options: {
+        callback: function callback() {
+          __webpack_require__.e(/*! import() | inputmask */ "inputmask").then(__webpack_require__.bind(__webpack_require__, /*! inputmask/lib/inputmask */ "./node_modules/inputmask/lib/inputmask.js")).then(function (module) {
+            var inputmask = module.default;
+            initInputMask(inputmask);
+          });
+        }
       }
-    }
-  });
-}
+    });
+  }
 
-function initInputMask(Inputmask) {
-  var im = new Inputmask('+7 999 999-99-99', {
-    "clearIncomplete": true
-  });
-  im.mask(elements);
-}
+  function initInputMask(Inputmask) {
+    var im = new Inputmask('+7 999 999-99-99', {
+      "clearIncomplete": true
+    });
+    im.mask(elements);
+  }
+};
+
+globalFuncInitInputMask();
 
 /***/ }),
 

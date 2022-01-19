@@ -114,14 +114,20 @@ EventEmiter.on('event:hamburgerClicked', function () {
   \*************************************************************************************/
 /***/ (() => {
 
+var parent = document.querySelector('.js-page-title-dropdown');
 var title = document.querySelector('.js-page-title-dropdown__title');
 
 if (title) {
-  var parent = title.parentNode;
   title.addEventListener('click', function () {
     parent.classList.toggle('active');
   });
 }
+
+document.body.addEventListener('click', function (e) {
+  if (!e.target.closest('.js-page-title-dropdown')) {
+    parent.classList.remove('active');
+  }
+});
 
 /***/ }),
 
@@ -152,12 +158,11 @@ document.body.addEventListener('click', function (e) {
   \*********************************************************************/
 /***/ (() => {
 
-var videoBlockPopup = new Popup();
 var videoBlocks = document.querySelectorAll('.js-video-block');
 Array.from(videoBlocks).forEach(function (videoBlock) {
   videoBlock.addEventListener('click', function () {
     var videoSrc = videoBlock.dataset.videoSrc;
-    videoBlockPopup.options({
+    globalPopup.options({
       addClassNamePopup: 'popup_video'
     }).html("<iframe width=\"0\" height=\"0\" frameborder=\"0\" src=\"".concat(videoSrc, "\" allowfullscreen></iframe>")).show();
   });
@@ -176,6 +181,8 @@ window.EventEmiter = __webpack_require__(/*! ../pubsub */ "./templates/default/s
 
 __webpack_require__(/*! ../plugins/lazysizes */ "./templates/default/src/js/plugins/lazysizes/index.js");
 
+__webpack_require__(/*! ../plugins/popup/popup */ "./templates/default/src/js/plugins/popup/popup.js");
+
 __webpack_require__(/*! ../users/phone-mask */ "./templates/default/src/js/users/phone-mask.js"); // custom scrtipts used for all pages
 
 
@@ -186,6 +193,8 @@ __webpack_require__(/*! ../../components/hamburger/hamburger */ "./templates/def
 __webpack_require__(/*! ../../components/search-header/search-header */ "./templates/default/src/components/search-header/search-header.js");
 
 __webpack_require__(/*! ../../components/menu/menu */ "./templates/default/src/components/menu/menu.js");
+
+window.globalPopup = new Popup();
 
 /***/ }),
 
@@ -666,28 +675,33 @@ var PubSub = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lazyloadjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lazyloadjs */ "./templates/default/src/js/lazyloadjs/index.js");
 
-var elements = document.querySelectorAll('.js-phone-mask');
 
-if (elements.length) {
-  (0,_lazyloadjs__WEBPACK_IMPORTED_MODULE_0__.lazyLoadJs)({
-    targets: elements,
-    options: {
-      callback: function callback() {
-        __webpack_require__.e(/*! import() | inputmask */ "inputmask").then(__webpack_require__.bind(__webpack_require__, /*! inputmask/lib/inputmask */ "./node_modules/inputmask/lib/inputmask.js")).then(function (module) {
-          var inputmask = module.default;
-          initInputMask(inputmask);
-        });
+window.globalFuncInitInputMask = function () {
+  var elements = document.querySelectorAll('.js-phone-mask');
+
+  if (elements.length) {
+    (0,_lazyloadjs__WEBPACK_IMPORTED_MODULE_0__.lazyLoadJs)({
+      targets: elements,
+      options: {
+        callback: function callback() {
+          __webpack_require__.e(/*! import() | inputmask */ "inputmask").then(__webpack_require__.bind(__webpack_require__, /*! inputmask/lib/inputmask */ "./node_modules/inputmask/lib/inputmask.js")).then(function (module) {
+            var inputmask = module.default;
+            initInputMask(inputmask);
+          });
+        }
       }
-    }
-  });
-}
+    });
+  }
 
-function initInputMask(Inputmask) {
-  var im = new Inputmask('+7 999 999-99-99', {
-    "clearIncomplete": true
-  });
-  im.mask(elements);
-}
+  function initInputMask(Inputmask) {
+    var im = new Inputmask('+7 999 999-99-99', {
+      "clearIncomplete": true
+    });
+    im.mask(elements);
+  }
+};
+
+globalFuncInitInputMask();
 
 /***/ }),
 

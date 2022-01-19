@@ -5,8 +5,10 @@
 	<title>Basket Page</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="css/basket.css">
+	<script src="js/static/frontend-works.js"></script>
 </head>
 
 <body>
@@ -33,7 +35,7 @@
 				</div>
 				<div class="header__right">
 					<div class="header__callback">
-						<button type="button" class="btn-orange btn-orange_callback">Заказать звонок</button>
+						<button type="button" class="btn-orange btn-orange_callback" data-ajax data-url="ajax/popup/callback/callback.html">Заказать звонок</button>
 					</div>
 					<div class="header__phone hide-mob">
 						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
@@ -156,10 +158,8 @@
 									<div class="basket-product__name">
 										<a href="#">Функциональные молочные белки для производства сыра</a>
 									</div>
-									<div class="basket-product__count">15 упаковок</div>
-									<div class="basket-product__delivery">Доставка: <b>с 19 декабря (воскресенье)</b></div>
 								</div>
-								<div class="basket-product__price">23 090 ₽</div>
+								<div class="basket-product__price"><span>от</span>23 090 ₽</div>
 							</div>
 						</div>
 						<div class="basket-page__product">
@@ -175,10 +175,8 @@
 									<div class="basket-product__name">
 										<a href="#">Функциональные молочные белки для производства сыра</a>
 									</div>
-									<div class="basket-product__count">15 упаковок</div>
-									<div class="basket-product__delivery">Доставка: <b>с 19 декабря (воскресенье)</b></div>
 								</div>
-								<div class="basket-product__price">23 090 ₽</div>
+								<div class="basket-product__price"><span>от</span>23 090 ₽</div>
 							</div>
 						</div>
 					</div>
@@ -189,21 +187,17 @@
 							<form action="#">
 								<div class="basket-form__title">Контактные данные</div>
 								<div class="basket-form__row basket-form__row_small">
-									<div class="basket-form__col">
-										<div class="basket-form__input">
-											<input type="tel" class="input js-phone-mask" placeholder="+ 7 ___ ___ __ __">
-										</div>
-										<div class="basket-form__input">
-											<input type="text" class="input" placeholder="Имя">
-										</div>
+									<div class="basket-form__input">
+										<input type="tel" inputmode="tel" class="input js-phone-mask" placeholder="+ 7 ___ ___ __ __">
 									</div>
-									<div class="basket-form__col">
-										<div class="basket-form__input">
-											<input type="email" class="input" placeholder="e-mail">
-										</div>
-										<div class="basket-form__input">
-											<input type="text" class="input" placeholder="Фамилия">
-										</div>
+									<div class="basket-form__input">
+										<input type="email" inputmode="email" class="input" placeholder="e-mail">
+									</div>
+									<div class="basket-form__input">
+										<input type="text" class="input" placeholder="Имя">
+									</div>
+									<div class="basket-form__input">
+										<input type="text" class="input" placeholder="Фамилия">
 									</div>
 								</div>
 								<div class="basket-form__title">Условия доставки</div>

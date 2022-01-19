@@ -5,8 +5,10 @@
 	<title>Contacts Page</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="css/contacts.css">
+	<script src="js/static/frontend-works.js"></script>
 </head>
 
 <body>
@@ -33,7 +35,7 @@
 				</div>
 				<div class="header__right">
 					<div class="header__callback">
-						<button type="button" class="btn-orange btn-orange_callback">Заказать звонок</button>
+						<button type="button" class="btn-orange btn-orange_callback" data-ajax data-url="ajax/popup/callback/callback.html">Заказать звонок</button>
 					</div>
 					<div class="header__phone hide-mob">
 						<a href="tel:+74951827777" class="phone phone_header">+7 (495) 182-77-77</a>
@@ -207,10 +209,10 @@
 											<input type="text" name="name" class="input" placeholder="Имя">
 										</div>
 										<div class="contact-form__input">
-											<input type="tel" name="phone" class="input js-phone-mask" autocomplete="nope" placeholder="+7 ___ ___-__-__">
+											<input type="tel" inputmode="tel" name="phone" class="input js-phone-mask" autocomplete="nope" placeholder="+7 ___ ___-__-__">
 										</div>
 										<div class="contact-form__input">
-											<input type="email" name="email" class="input" placeholder="e-mail">
+											<input type="email" inputmode="email" name="email" class="input" placeholder="e-mail">
 										</div>
 									</div>
 									<div class="contact-form__col">
