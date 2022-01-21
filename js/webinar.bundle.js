@@ -44,6 +44,7 @@ window.addEventListener('scroll', function () {
 var body = document.body;
 var menu = document.querySelector('.js-menu');
 var titles = document.querySelectorAll('.js-menu_title');
+var content = document.querySelector('.js-menu__content_has-dropdown');
 
 var getScrollbarWidth = function getScrollbarWidth() {
   return window.innerWidth - document.documentElement.clientWidth;
@@ -51,9 +52,30 @@ var getScrollbarWidth = function getScrollbarWidth() {
 
 Array.from(titles).forEach(function (title) {
   title.addEventListener('click', function () {
+    title.classList.toggle('active');
     title.parentNode.classList.toggle('active');
+    var panel = title.nextElementSibling;
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
   });
+}); // Нужны для показа дропдована у пункта меню при ховере.
+// Как пример у пункта меню (Другие проекты) при ховере появляется дропдовн меню
+
+content.addEventListener('transitionstart', function (e) {
+  if (!e.target.style.maxHeight) {
+    e.target.style.overflow = null;
+  }
 });
+content.addEventListener('transitionend', function (e) {
+  if (e.target.style.maxHeight) {
+    e.target.style.overflow = 'visible';
+  }
+}); // Конец
+
 EventEmiter.on('event:hamburgerClicked', function () {
   if (body.classList.contains('menu-open')) {
     body.style.paddingRight = null;
@@ -508,12 +530,24 @@ lazySizesConfig.expand = 1000;
 
       if (callback) {
         callback.call(this.tags.popup, this.defaults, this.eventsTrigger);
-      }
+      } // Тригерим событие чтобы можно было выполнить операции с дом после появления попапа
+      // Create the event
+
+
+      var event = new CustomEvent("popup:shown"); // Dispatch/Trigger/Fire the event
+
+      document.dispatchEvent(event); // Конец
 
       return this;
     },
     close: function close(clear, callback) {
-      var obj = this;
+      var obj = this; // Тригерим событие чтобы можно было выполнить операции с дом до закрытия попапа
+      // Create the event
+
+      var event = new CustomEvent("popup:closed"); // Dispatch/Trigger/Fire the event
+
+      document.dispatchEvent(event); // Конец
+
       setTimeout(function () {
         obj.tags.popup.classList.remove('popup_active');
 
@@ -636,7 +670,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lazyloadjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lazyloadjs */ "./templates/default/src/js/lazyloadjs/index.js");
 
 
-window.globalFuncInitInputMask = function () {
+var runInitInputMask = function runInitInputMask() {
   var elements = document.querySelectorAll('.js-phone-mask');
 
   if (elements.length) {
@@ -661,7 +695,11 @@ window.globalFuncInitInputMask = function () {
   }
 };
 
-globalFuncInitInputMask();
+runInitInputMask(); // Add an event listener
+
+document.addEventListener("popup:shown", function (e) {
+  runInitInputMask();
+});
 
 /***/ }),
 

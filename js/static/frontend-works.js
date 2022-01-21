@@ -4,15 +4,19 @@ document.addEventListener('DOMContentLoaded', function () {
 			e.preventDefault();
 
 			const url = e.target.getAttribute('data-url');
+			const modiferClass = e.target.getAttribute('data-modifer-popup-class');
 
 			fetch(url)
 				.then(function(response) {
 					return response.text();
 				})
 				.then(function(html) {
-					globalPopup.html(html).show(function() {
-						globalFuncInitInputMask();
-					});
+					globalPopup
+						.options({
+							addClassNamePopup: modiferClass ? modiferClass : null,
+						})
+						.html(html)
+						.show();
 				});
 		}
 	});
