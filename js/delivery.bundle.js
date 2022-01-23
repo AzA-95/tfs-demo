@@ -25,31 +25,21 @@ if (isPhone) {
 // Functional of show hide dropdown
 
 
-var topTitles = document.querySelectorAll('.js-adresses-block__top-title');
+var titles = document.querySelectorAll('.js-adresses-block__title');
 
-if (topTitles.length) {
-  var arrTitles = Array.from(topTitles);
-  arrTitles.forEach(function (topTitle) {
-    topTitle.addEventListener('click', function () {
+if (titles.length) {
+  var arrTitles = Array.from(titles);
+  arrTitles.forEach(function (title, index) {
+    title.addEventListener('click', function () {
       var _this = this;
 
-      var parent = topTitle.parentNode;
+      var parent = title.parentNode;
       parent.classList.toggle('active');
-      arrTitles.forEach(function (topTitle) {
-        if (topTitle !== _this) {
-          topTitle.parentNode.classList.remove('active');
+      arrTitles.forEach(function (title, index) {
+        if (title !== _this) {
+          title.parentNode.classList.remove('active');
         }
-      }); // Trigger click to first city on active tab
-
-      if (parent.classList.contains('active')) {
-        var cityTitle = parent.querySelector('.js-adresses-block__title');
-
-        if (cityTitle) {
-          cityTitle.click();
-        }
-      } // end
-      // Scroll to active city
-
+      }); // Scroll to active city
 
       if (isPhone && parent.classList.contains('active')) {
         var offsetTop = parent.getBoundingClientRect().top + document.documentElement.scrollTop;
@@ -120,8 +110,8 @@ function initMap() {
     var myPlacemark = new ymaps.Placemark(map.getCenter(), {}, {
       iconLayout: 'default#image',
       iconImageHref: 'images/icons/map-pin.svg',
-      iconImageSize: [45, 58],
-      iconImageOffset: [0, -58]
+      iconImageSize: [35, 50],
+      iconImageOffset: [0, -50]
     });
     map.geoObjects.add(myPlacemark); // end
     // buttons for switch schema of map

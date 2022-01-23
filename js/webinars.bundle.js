@@ -1,36 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./templates/default/src/ajax/popup/filter-mob/filter-mob.js":
-/*!*******************************************************************!*\
-  !*** ./templates/default/src/ajax/popup/filter-mob/filter-mob.js ***!
-  \*******************************************************************/
-/***/ (() => {
-
-var initAccordion = function initAccordion() {
-  var titles = document.querySelectorAll(".js-popup-filter-mob__title");
-  Array.from(titles).forEach(function (title) {
-    title.addEventListener("click", function () {
-      this.classList.toggle("active");
-      this.parentNode.classList.toggle("active");
-      var panel = this.nextElementSibling;
-
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
-  });
-}; // Add an event listener
-
-
-document.addEventListener("popup:shown", function (e) {
-  initAccordion();
-});
-
-/***/ }),
-
 /***/ "./templates/default/src/components/hamburger/hamburger.js":
 /*!*****************************************************************!*\
   !*** ./templates/default/src/components/hamburger/hamburger.js ***!
@@ -1718,10 +1688,7 @@ var __webpack_exports__ = {};
   !*** ./templates/default/src/js/pages/webinars.js ***!
   \****************************************************/
 // scripts used on all page
-__webpack_require__(/*! ../layout/layout */ "./templates/default/src/js/layout/layout.js"); // popups js code
-
-
-__webpack_require__(/*! ../../ajax/popup/filter-mob/filter-mob */ "./templates/default/src/ajax/popup/filter-mob/filter-mob.js"); // custom scripts without components
+__webpack_require__(/*! ../layout/layout */ "./templates/default/src/js/layout/layout.js"); // custom scripts without components
 // custom components scrtipts used for page
 
 

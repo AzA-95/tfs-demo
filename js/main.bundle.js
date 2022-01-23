@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./templates/default/src/components/adresses-block-main/adresses-block-main.js":
-/*!*************************************************************************************!*\
-  !*** ./templates/default/src/components/adresses-block-main/adresses-block-main.js ***!
-  \*************************************************************************************/
+/***/ "./templates/default/src/components/adresses-block/adresses-block.js":
+/*!***************************************************************************!*\
+  !*** ./templates/default/src/components/adresses-block/adresses-block.js ***!
+  \***************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -16,12 +16,16 @@ var isPhone = window.matchMedia("(max-width: 767px)").matches ? true : false; //
 
 if (isPhone) {
   var map = document.querySelector('#map');
-  document.querySelector('.js-adresses-block-main__mob-map').appendChild(map);
+  var mobMap = document.querySelector('.js-adresses-block__mob-map');
+
+  if (mobMap) {
+    mobMap.appendChild(map);
+  }
 } // end
 // Functional of show hide dropdown
 
 
-var titles = document.querySelectorAll('.js-adresses-block-main__title');
+var titles = document.querySelectorAll('.js-adresses-block__title');
 
 if (titles.length) {
   var arrTitles = Array.from(titles);
@@ -47,7 +51,11 @@ if (titles.length) {
       if (isPhone) {
         var _map = document.querySelector('#map');
 
-        parent.querySelector('.js-adresses-block-main__mob-map').appendChild(_map);
+        var _mobMap = parent.querySelector('.js-adresses-block__mob-map');
+
+        if (_mobMap) {
+          _mobMap.appendChild(_map);
+        }
       } // end
 
     });
@@ -56,7 +64,7 @@ if (titles.length) {
 // Lazy load of map
 
 
-var adressesBlock = document.querySelector('.js-adresses-block-main');
+var adressesBlock = document.querySelector('.js-adresses-block');
 
 if (adressesBlock) {
   (0,_js_lazyloadjs__WEBPACK_IMPORTED_MODULE_0__.lazyLoadJs)({
@@ -90,7 +98,7 @@ function initMap() {
   ymaps.ready(init);
 
   function init() {
-    var cities = document.querySelectorAll('.js-adresses-block-main__title');
+    var cities = document.querySelectorAll('.js-adresses-block__title');
     var initialCordinates = cities[0].dataset.cordinatesOfMap.split(","); // Создание карты.
 
     var map = new ymaps.Map("map", {
@@ -1856,7 +1864,7 @@ __webpack_require__(/*! ../layout/layout */ "./templates/default/src/js/layout/l
 
 __webpack_require__(/*! ../../components/articles-slider/articles-slider */ "./templates/default/src/components/articles-slider/articles-slider.js");
 
-__webpack_require__(/*! ../../components/adresses-block-main/adresses-block-main */ "./templates/default/src/components/adresses-block-main/adresses-block-main.js");
+__webpack_require__(/*! ../../components/adresses-block/adresses-block */ "./templates/default/src/components/adresses-block/adresses-block.js");
 })();
 
 /******/ })()
